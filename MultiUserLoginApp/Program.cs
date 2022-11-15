@@ -13,12 +13,7 @@ namespace MultiUserLoginApp
     {
         static void Main(string[] args)
         {
-
-
-            CountTill(4);
-
-
-            //Navigator.NavigateTo(PageType.Menu);
+            Navigator.NavigateTo(PageType.Menu);
             Console.ReadLine();
         }
 
@@ -34,19 +29,7 @@ namespace MultiUserLoginApp
         }
 
 
-        public static void AddUser(User user)
-        {
-            SqlConnection connection = new SqlConnection("Data Source=DESKTOP-5VQTP5K;Initial Catalog=Amazon;Integrated Security=True");
-            SqlCommand sqlCommand =
-                new SqlCommand($"INSERT INTO [dbo].[User]([Username],[Password]) VALUES ('{user.Username}','{user.Password}')", connection);
-
-            connection.Open();
-
-            int rowsAffected = sqlCommand.ExecuteNonQuery();
-            
-            connection.Close();
-
-        }
+       
 
     }
 }
