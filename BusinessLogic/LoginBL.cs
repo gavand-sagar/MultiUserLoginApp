@@ -20,7 +20,16 @@ namespace BusinessLogic
             }
             else
             {
-                return (user.Username == "Admin" && user.Password == "123");
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-5VQTP5K;Initial Catalog=Amazon;Integrated Security=True"))
+                {
+                    SqlCommand sqlCommand =
+                    new SqlCommand($"SELECT * FROM [dbo].[User] WHERE [Username]='{user.Username}' AND [Password]='{user.Password}'", connection);
+
+                    connection.Open();
+                    var reader = sqlCommand.ExecuteReader();
+                    return reader.Read();
+                }               
+                
             }
         }
 

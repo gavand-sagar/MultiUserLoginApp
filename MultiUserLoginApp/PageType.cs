@@ -12,6 +12,7 @@ namespace MultiUserLoginApp
         Menu,
         SignUp,
         Dashboard,
-        AddAnItem
+        AddAnItem,
+        ListAll
     }
 }

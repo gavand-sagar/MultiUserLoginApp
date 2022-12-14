@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace MultiUserLoginApp
 {
-    public class Page
+    public abstract class Page
     {
-        public virtual void Show()
-        {
-
-        }
+        public abstract void Show();
     }
 }

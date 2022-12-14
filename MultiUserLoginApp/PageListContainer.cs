@@ -16,6 +16,8 @@ namespace MultiUserLoginApp
             Pages.Add(PageType.Menu, new MenuPage());
             Pages.Add(PageType.Dashboard, new Dashboard());
             Pages.Add(PageType.SignUp, new SignUpPage());
+            Pages.Add(PageType.AddAnItem, new AddItemPage());
+            Pages.Add(PageType.ListAll, new ListAllPage());
         }
     }
 }

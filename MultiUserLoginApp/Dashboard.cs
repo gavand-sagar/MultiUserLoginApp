@@ -20,6 +20,9 @@ namespace MultiUserLoginApp
             if (input == "1")
             {
                 Navigator.NavigateTo(PageType.AddAnItem);
+            }else if (input == "2")
+            {
+                Navigator.NavigateTo(PageType.ListAll);
             }
         }
 
